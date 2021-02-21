@@ -6,16 +6,6 @@ fetch('http://puzzle.mead.io/puzzle').then((response)=>{
     })
 })
 */
-fetch('http://localhost:3000/weather?address=Miami').then((response)=>{
-    response.json().then((data)=>{
-        if(data.error){
-            console.log(data.error)
-        }
-        else{
-            console.log(data)
-        }
-    })
-})
 var prvi=document.querySelector('#one')
 var drugi=document.querySelector('#two')
 //prvi.textContent="Nesto je anpsiano"
@@ -28,7 +18,7 @@ forma.addEventListener('submit',(event)=>{
     event.preventDefault()
     var location=search.value
     //console.log(location)
-    var url="http://localhost:3000/weather?address="+location
+    var url="/weather?address="+location
     console.log(url)
     fetch(url).then((response)=>{
         response.json().then((data)=>{

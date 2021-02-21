@@ -4,6 +4,7 @@ const hbs=require('hbs')
 const viewsPath=path.join(__dirname,'../templates/views')
 const partPath=path.join(__dirname,'../templates/partials')
 const app=express()
+const port=process.env.PORT || 3000
 //console.log(__dirname)
 //console.log(path.join(__dirname,'..','/public'))
 app.set('views',viewsPath)
@@ -68,6 +69,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log("Server has started!")
+app.listen(port,()=>{
+    console.log("Server has started at:"+port+"!")
 })
