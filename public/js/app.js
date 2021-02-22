@@ -30,7 +30,7 @@ forma.addEventListener('submit',(event)=>{
             }
             else{
                 prvi.textContent="Location: "+data.location
-                drugi.textContent="Temperature: "+data.temperature+", Feels like: "+data.feelsLike
+                drugi.textContent="Temperature: "+data.temperature+", Feels like: "+data.feelsLike+" Humidity is : "+data.humidity
                 console.log(data)
             }
         })

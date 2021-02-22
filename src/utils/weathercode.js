@@ -18,9 +18,10 @@ const weathercode=(longitude,lattitude,callback)=>{
                 var feelsLike=data.feelslike
                 
                 var value={
-                    feelsLike:feelsLike,
-                    temperature:temp,
-                    location: data.location
+                    feelsLike: feelsLike,
+                    temperature: temp,
+                    location: data.location,
+                    humidity: data.humidity
                 }
                 //console.log(value)
                 //console.log("It is "+temp+" degrees and it feels like "+feelsLike+" deggres"+" and the weather is "+data.weather_descriptions[0])
